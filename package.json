@@ -1,0 +1,23 @@
+{
+  "name": "mobile-engineering-samples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Selected TypeScript and React Native engineering samples from a private mobile project.",
+  "author": "Enrico Spadaro",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "demo": "npm run build && node examples/offline-demo.mjs",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.17",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "typescript": "6.0.3"
+  }
+}
